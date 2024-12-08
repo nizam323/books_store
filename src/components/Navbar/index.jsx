@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { globalStates } from "../../App";
 
 export default function Navbar() {
+    const { showNavSideBar, setShowNavSideBar,showCart,setShowCart } = useContext(globalStates);
     return (
         <>
             <nav className="nav">
@@ -13,7 +15,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className="nav-2nd">
-                    <div className="amount-cart" style={{ cursor: "pointer", }} >
+                    <div onClick={() => setShowCart(!showCart)} className="amount-cart" style={{ cursor: "pointer", }} >
                         <ul>
                             <li><a><span className="nav-2nd-span"><span>$</span>0.00</span></a></li>
                             <li><a><i className="fa-solid fa-bag-shopping">
@@ -26,7 +28,7 @@ export default function Navbar() {
                             <li><a href="login.html"><i className="fa-solid fa-user"></i></a></li>
                         </ul>
                     </div>
-                    <div className="burger-icon-parent">
+                    <div onClick={() => setShowNavSideBar(!showNavSideBar)} className="burger-icon-parent">
                         <div className="burger-icon">
                             <div className="b-i-1"></div>
                             <div className="b-i-1"></div>

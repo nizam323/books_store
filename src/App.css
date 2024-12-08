@@ -684,7 +684,7 @@ a {
     height: 100vh;
     width: 0%;
     position: fixed;
-    z-index: 5;
+    z-index: 50;
     top: 0;
     right: 0;
     overflow: hidden;
@@ -768,7 +768,7 @@ a {
 }
 
 .add-to-cart-msg-con {
-    /* height: 76%; */
+    height: 76%;
     display: flex;
     align-items: center;
     font-weight: lighter;
@@ -780,9 +780,8 @@ a {
     background-color: white;
     color: black;
     height: 100vh;
-    width: 0%;
     position: fixed;
-    z-index: 5;
+    z-index: 50;
     top: 0;
     right: 0;
     overflow: hidden;

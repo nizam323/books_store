@@ -8,14 +8,19 @@ import Herosection from './components/Herosection';
 import Signin from './UIs/Signin';
 import Signup from './UIs/Signup';
 import Navsidebar from './UIs/NavSideBar';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
+import AddToCart from './UIs/AddToCart';
+
+export const globalStates = createContext();
 
 function App() {
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
+  const [showNavSideBar, setShowNavSideBar] = useState(false);
+
   return (
-    <>
+    <globalStates.Provider value={{ showCart, setShowCart, showNavSideBar, setShowNavSideBar }}>
       {/* <Navbar /> */}
-      <Herosection />
+      {/* <Herosection />
       <div className="sec-4">
         <div className="hd">
           Featured Products
@@ -29,18 +34,19 @@ function App() {
 
         </div>
       </div>
-      <Footer />
-
-      {/* <Navbar />
-      <ProductDetailPage />
       <Footer /> */}
+
+      {/* <Navbar /> */}
+      {/* <ProductDetailPage /> */}
+      {/* <Footer />  */}
 
       {/* <Signin /> */}
       {/* <Signup /> */}
 
-      {showCart && <Navsidebar />}
+      <Navsidebar />
+      <AddToCart />
 
-    </>
+    </globalStates.Provider>
   );
 }
 
