@@ -103,7 +103,7 @@ html {
     font-size: 1.1rem;
     font-weight: 700;
     padding: 0 14px;
-    color: white;
+    /* color: white; */
     text-decoration: none;
 }
 
@@ -857,4 +857,15 @@ a {
     transform: rotate(45deg);
     font-size: 45px;
     cursor: pointer;
+}
+
+
+/* //active */
+
+.active{
+    color: wheat;
+}
+
+.inactive{
+    color: white;
 }

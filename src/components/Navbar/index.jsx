@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
 import { globalStates } from "../../App";
+import Navsidebar from "../../UIs/NavSideBar";
+import AddToCart from "../../UIs/AddToCart";
+import { NavLink } from "react-router";
 
 export default function Navbar() {
-    const { showNavSideBar, setShowNavSideBar,showCart,setShowCart } = useContext(globalStates);
+    const { showNavSideBar, setShowNavSideBar, showCart, setShowCart } = useContext(globalStates);
     return (
         <>
             <nav className="nav">
@@ -10,7 +13,8 @@ export default function Navbar() {
                     <div className="logo"> </div>
                     <div className="anchors">
                         <ul>
-                            <li><a><h2 style={{ paddingLeft: "20px" }}>HOME</h2></a></li>
+                            <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}
+                            ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>HOME</h2></NavLink></li>
                         </ul>
                     </div>
                 </div>
@@ -37,6 +41,10 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
+
+            <Navsidebar />
+            <AddToCart />
+
         </>
     )
 }
