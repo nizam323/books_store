@@ -514,4 +514,139 @@
     .form-con {
         margin-top: 15px;
     }
+}
+
+/* about */
+@media only screen and (min-width: 0px) and (max-width: 766px) {
+    .about-bg-con {
+        height: 60vh;
     }
+
+    .about-sec-2-container {
+        padding: 30px 20px;
+    }
+
+    .bg-container::before {
+        background-size: 100% 60%;
+        background-position: top;
+    }
+
+    .about-sec-2-container {
+        flex-direction: column;
+    }
+
+    .ab-sec-2-first-parent {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .ab-sec-2-first-parent-img {
+        height: 50vmin;
+    }
+
+    .ab-sec-2-txt h1 {
+        font-size: 30px;
+    }
+
+    .ab-sec-2-line {
+        width: 90px;
+    }
+
+    .ab-sec-3-txt1 {
+        font-size: 16px;
+    }
+
+    .ab-sec-3-txt2 {
+        font-size: 20px;
+    }
+
+    .ab-sec-3-txt3 {
+        text-align: justify;
+        line-height: 1.7;
+    }
+
+    .ab-sec-3 {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+    .ot-pro {
+        width: 85%;
+    }
+
+    .followus-parent {
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .followus-content-con {
+        height: 70%;
+        width: 80%;
+    }
+
+    .followus-con-2 {
+        margin: 25px 0 35px;
+        font-size: 18px;
+    }
+
+    .followus-con-3 i {
+        font-size: 22px;
+        padding: 0px 9px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 921px) {
+    .bg-con-1 {
+        width: 100%;
+    }
+
+    .about-sec-2-container {
+        flex-direction: column;
+    }
+
+
+    .ab-sec-2-first-parent {
+        width: 100%;
+    }
+
+    .ab-sec-2-first-parent-img {
+        height: 341px;
+    }
+
+    .ab-sec-3-txt1 {
+        font-size: 16px;
+    }
+
+    .ab-sec-3-txt2 {
+        font-size: 20px;
+    }
+
+    .ab-sec-3-txt3 {
+        text-align: justify;
+        line-height: 1.7;
+    }
+
+    .ab-sec-3 {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+}
+
+@media only screen and (min-width:922px) and (max-width:1024px) {
+    .about-sec-2-container {
+        flex-direction: column;
+    }
+
+    .ab-sec-2-first-parent {
+        width: 100%;
+    }
+
+    .ab-sec-2-first-parent-img {
+        height: 341px;
+    }
+
+}

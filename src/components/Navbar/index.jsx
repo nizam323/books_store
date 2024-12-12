@@ -5,7 +5,7 @@ import AddToCart from "../../UIs/AddToCart";
 import { NavLink } from "react-router";
 
 export default function Navbar() {
-    const { showNavSideBar, setShowNavSideBar, showCart, setShowCart } = useContext(globalStates);
+    const { showNavSideBar, setShowNavSideBar, showCart, setShowCart, dropDown, setDropDown } = useContext(globalStates);
     return (
         <>
             <nav className="nav">
@@ -15,6 +15,8 @@ export default function Navbar() {
                         <ul>
                             <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}
                             ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>HOME</h2></NavLink></li>
+                            <li><NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "inactive")}
+                            ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>ABOUT</h2></NavLink></li>
                         </ul>
                     </div>
                 </div>
@@ -27,10 +29,19 @@ export default function Navbar() {
                             </i></a></li>
                         </ul>
                     </div>
-                    <div className="login">
-                        <ul>
-                            <li><a href="login.html"><i className="fa-solid fa-user"></i></a></li>
+                    <div className="login"
+                        style={{ position: "relative", cursor: "pointer" }}
+                        onClick={() => setDropDown(!dropDown)}><ul>
+                            <li><a><i className="fa-solid fa-user"></i></a></li>
                         </ul>
+                        {dropDown && <div className="login-routes">
+                            <h3><NavLink
+                                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                                to={"/signin"}>SIGN IN</NavLink></h3>
+                            <span style={{ display: "block", height: "5px" }}></span>
+                            <h3><NavLink
+                                className={({ isActive }) => (isActive ? "active" : "inactive")}
+                                to={"/signup"}>SIGN UP</NavLink></h3></div>}
                     </div>
                     <div onClick={() => setShowNavSideBar(!showNavSideBar)} className="burger-icon-parent">
                         <div className="burger-icon">
@@ -44,7 +55,6 @@ export default function Navbar() {
 
             <Navsidebar />
             <AddToCart />
-
         </>
     )
 }

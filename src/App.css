@@ -40,7 +40,7 @@ html {
 .nav {
     position: relative;
     z-index: 10;
-    background-color:#00000082;
+    background-color: #00000082;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,6 @@ html {
     width: 10rem;
     border-radius: 17px;
     height: 5.33rem;
-    cursor: pointer;
 }
 
 .nav-2nd ul,
@@ -88,6 +87,16 @@ html {
     padding: 0px 11px;
     color: white;
     text-decoration: none;
+}
+
+.login-routes{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    background-color: #9ca4a9;
+    padding: 15px;
+    width: 84px;
+    border-radius: 15px;
 }
 
 .login ul li a {
@@ -474,7 +483,7 @@ html {
 
 .product-main-parent {
     background-color: #f5f7f9;
-} 
+}
 
 .product-main-container {
     padding: 0px 20px;
@@ -826,7 +835,7 @@ a {
 
 .nav-sidebar-anchors a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 
 .addtocart-products {
@@ -862,10 +871,172 @@ a {
 
 /* //active */
 
-.active{
+.active {
     color: wheat;
 }
 
-.inactive{
+.inactive {
     color: white;
+}
+
+.inactive:hover{
+    color: rgb(249, 249, 177);
+    transition: color .5s ease-in-out;
+}
+
+.active2 {
+    color: black;
+}
+
+.inactive2 {
+    color: #a2a099;
+}
+
+/* //about */
+
+.bg-container::before {
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-image: url(images/about-bg.jpg);
+}
+
+.about-sec-2-container {
+    background-color: #f5f7f9;
+    padding: 60px;
+    display: flex;
+}
+
+.ab-sec-2-first-parent {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    padding: 65px 55px;
+}
+
+.about-bg-con {
+    height: 80vh;
+    background: linear-gradient(180deg, #0084d6 -50%, #000000 100%);
+}
+
+.ab-sec-2-txt h1 {
+    margin: 25px 0;
+    font-size: 42px;
+}
+
+.ab-sec-2-line {
+    background-color: #0084d6;
+    height: 5px;
+    width: 18%;
+    border-radius: 5px;
+}
+
+.ab-sec-3 {
+    padding: 100px 0;
+    margin: 0 120px;
+}
+
+.sec-3-content-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ab-sec-3-txt1 {
+    font-size: 20px;
+}
+
+.ab-sec-3-txt2 {
+    font-size: 25px;
+    margin: 25px 0px;
+}
+
+.ab-sec-3-txt3 {
+    line-height: 1.8;
+    width: 60%;
+    text-align: center;
+}
+
+.ot-profiles-con {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ot-pro {
+    background: #f5f7f9;
+    height: 250px;
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ot-pro-name {
+    margin: 20px 0px 12px;
+    font-size: 20px;
+}
+
+.ot-pro-profession {
+    font-size: 16px;
+    color: #0c01018c;
+}
+
+.ot-pro-img img {
+    width: 100px;
+}
+
+.followus-parent {
+    height: 450px;
+    position: relative;
+    background: linear-gradient(#0a0a0a75, #090909ab);
+}
+
+.followus-parent::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    position: absolute;
+    background-image: url(images/about-sec-last.jpg);
+    background-size: 100% 114%;
+    background-position-y: top;
+}
+
+.followus-content-con {
+    height: 100%;
+    width: 40%;
+    background-color: #f5f7f9;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.followus-con-1 {
+    height: 5px;
+    width: 80px;
+    background-color: #0084d6;
+}
+
+.followus-con-2 {
+    margin: 50px 0 70px;
+    font-size: 30px;
+}
+
+.followus-con-3 i {
+    color: black;
+    font-size: 30px;
+    padding: 0 20px;
+}
+
+.followus-con-3 i:hover {
+    color: #1882c4;
 }
