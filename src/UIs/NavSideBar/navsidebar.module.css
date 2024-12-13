@@ -1,0 +1,52 @@
+.navsidebar {
+    background-color: white;
+    color: black;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.navsidebartoggle {
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.navsidebarclosebtn {
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
+    font-size: 4rem;
+    width: 50px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.navsidebarlogin a {
+    font-size: 2rem;
+    padding-left: 40px;
+    color: black;
+
+}
+
+.navsidebaranchors {
+    height: 60px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    display: flex;
+    background-color: #f5f7f9;
+    align-items: center;
+    padding-left: 35px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.navsidebaranchors a {
+    text-decoration: none;
+    /* color: black; */
+}

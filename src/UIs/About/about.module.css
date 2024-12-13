@@ -1,0 +1,147 @@
+.bgcontainer::before {
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-image: url(images/about-bg.jpg);
+}
+
+.aboutsec2container {
+    background-color: #f5f7f9;
+    padding: 60px;
+    display: flex;
+}
+
+.absec2firstparent {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    padding: 65px 55px;
+}
+
+.aboutbgcon {
+    height: 80vh;
+    background: linear-gradient(180deg, #0084d6 -50%, #000000 100%);
+}
+
+.absec2txt h1 {
+    margin: 25px 0;
+    font-size: 42px;
+}
+
+.absec2line {
+    background-color: #0084d6;
+    height: 5px;
+    width: 18%;
+    border-radius: 5px;
+}
+
+.absec3 {
+    padding: 100px 0;
+    margin: 0 120px;
+}
+
+.sec3contentparent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.absec3txt1 {
+    font-size: 20px;
+}
+
+.absec3txt2 {
+    font-size: 25px;
+    margin: 25px 0px;
+}
+
+.absec3txt3 {
+    line-height: 1.8;
+    width: 60%;
+    text-align: center;
+}
+
+.otprofilescon {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.otpro {
+    background: #f5f7f9;
+    height: 250px;
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.otproname {
+    margin: 20px 0px 12px;
+    font-size: 20px;
+}
+
+.otproprofession {
+    font-size: 16px;
+    color: #0c01018c;
+}
+
+.otproimg img {
+    width: 100px;
+}
+
+.followusparent {
+    height: 450px;
+    position: relative;
+    background: linear-gradient(#0a0a0a75, #090909ab);
+}
+
+.followusparent::before {
+    content: "";
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    position: absolute;
+    background-image: url(images/about-sec-last.jpg);
+    background-size: 100% 114%;
+    background-position-y: top;
+}
+
+.followuscontentcon {
+    height: 100%;
+    width: 40%;
+    background-color: #f5f7f9;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.followuscon1 {
+    height: 5px;
+    width: 80px;
+    background-color: #0084d6;
+}
+
+.followuscon2 {
+    margin: 50px 0 70px;
+    font-size: 30px;
+}
+
+.followuscon3 i {
+    color: black;
+    font-size: 30px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.followuscon3 i:hover {
+    color: #1882c4;
+}

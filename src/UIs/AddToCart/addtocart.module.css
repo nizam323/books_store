@@ -1,0 +1,97 @@
+.cartsidebar {
+    background-color: white;
+    color: black;
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.cartsidebartoggle {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartsidebarhead {
+    border-bottom: 1px solid #e2e2e2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.addtocarttxt {
+    font-size: 1.3rem;
+    width: 146px;
+    text-align: end;
+}
+
+.addtocartbtn {
+    transform: rotate(45deg);
+    font-size: 4rem;
+    width: 50px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.addtocartshopbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#checkout {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.subtotal {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.subtotal p {
+    padding: 0 10%;
+    font-size: 1.4rem;
+}
+
+.addtocartshopbtn button {
+    width: 80%;
+    height: 50px;
+    color: white;
+    background-color: #0084d6;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.addtocartshopbtn button:hover {
+    background-color: #0075be;
+}
+
+.addtocartmsgcon {
+    height: 76%;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 1.7rem;
+    justify-content: center;
+}
