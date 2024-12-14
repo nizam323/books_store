@@ -6,17 +6,21 @@ export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    function handleSubmit() {
-        fetch("http:/localhost:3000/signin"), {
-            method: "post",
-            Headers: {},
-            body: JSON.stringify(
-                {
-                    email,
-                    password
-                }
-            )
-        }
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("http://localhost:3000/signin", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        })
+            .then((response) => response.json())
+            .then((data) => window.localStorage.setItem("token", data.token))
+            .catch((error) => console.log(error))
     }
 
     return (
@@ -25,7 +29,7 @@ export default function SignIn() {
                 <div className={styles.logincon}>
                     <div className={styles.img} style={{ backgroundImage: `url(${logo})`, borderRadius: "40px" }}></div>
                     <div className={styles.unameemail}>
-                        <form method="post" onSubmit={handleSubmit}>
+                        <form method="POST" onSubmit={handleSubmit}>
                             <label htmlFor="u-email" style={{ color: '#3c434a' }}>Email Address</label>
                             <input className={styles.input} type="text" id="u-email" required
                                 value={email}
@@ -38,13 +42,13 @@ export default function SignIn() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
+                            <center>
+                                <div className={styles.checkbtn} style={{ justifyContent: "center" }}>
+                                    <button type="submit">Sign In</button>
+                                </div>
+                            </center>
                         </form>
                     </div>
-                    <center>
-                        <div className={styles.checkbtn} style={{ justifyContent: "center" }}>
-                            <button type="submit">Sign In</button>
-                        </div>
-                    </center>
                 </div>
                 <div className={styles.acon}>
                     <a>Lost your password?</a>
