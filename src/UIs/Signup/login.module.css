@@ -27,7 +27,7 @@
     margin-top: 75px;
 }
 
-.unameemail input {
+.unameemail .input {
     width: 95.9%;
     height: 28px;
     font-size: 18px;
@@ -42,9 +42,6 @@
 }
 
 .checkbtn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     margin-top: 15px;
 }
