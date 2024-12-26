@@ -250,7 +250,7 @@ html {
     padding-bottom: 30px;
 }
 
-.pro-img {
+.pro-img { 
     background-image: url(images/product-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
