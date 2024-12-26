@@ -4,12 +4,13 @@ import styles from "./about.module.css"
 export default function About() {
     return (
         <>
-            <div className={`${styles.bgcontainer} ${styles.aboutbgcon}`}>
+            <div className={`${styles.bgcontainer} ${styles.aboutbgcon}`}
+                style={{ backgroundImage: `url(/images/pexels-photo-1907785.jpeg)` }}>
                 <div className={styles.bgcontent} style={{ justifyContent: "center", alignItems: "center" }}>
                     <div className={styles.bgcontentcontainer} style={{ margin: "0" }}>
                         <div className={styles.bgcon1}
                             style={{ color: "white", fontWeight: "600", height: "253px", display: "flex", alignItems: "center", textAlign: "center", justifyContent: "center" }}>
-                            About Us</div>
+                            <h1>About Us</h1></div>
                     </div>
                 </div>
             </div >

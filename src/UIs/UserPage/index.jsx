@@ -6,7 +6,7 @@ import Navsidebar from "../NavSideBar";
 import AddToCart from "../AddToCart";
 import { Link } from "react-router";
 
-export default function PublicMainPageUI() {
+export default function UserPage() {
     const [data, setData] = useState([]);
     useEffect(() => {
         fetch("http://localhost:3000/get-products")
@@ -17,7 +17,7 @@ export default function PublicMainPageUI() {
 
     return (
         <>
-            <Herosection />
+            {/* <Herosection />
             <div className="sec-4">
                 <div className="hd">
                     Featured Products
@@ -42,7 +42,8 @@ export default function PublicMainPageUI() {
 
                 </div>
             </div>
-            <Footer />
+            */}
+            <Footer /> 
         </>
     )
 }

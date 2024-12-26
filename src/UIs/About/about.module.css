@@ -1,7 +1,7 @@
-.bgcontainer::before {
+.bgcontainer {
     background-repeat: no-repeat;
     background-size: 100% 70%;
-    background-image: url(images/about-bg.jpg);
+    background-image: url(images/pexels-photo-4219041.webp);
 }
 
 .aboutsec2container {
@@ -108,7 +108,7 @@
     width: 100%;
     background-attachment: fixed;
     position: absolute;
-    background-image: url(images/about-sec-last.jpg);
+    background-image: url(images/pexels-photo-4219041.webp);
     background-size: 100% 114%;
     background-position-y: top;
 }

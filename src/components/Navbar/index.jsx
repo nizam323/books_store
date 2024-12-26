@@ -14,7 +14,7 @@ export default function Navbar() {
                     <div className="anchors">
                         <ul>
                             <li><NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}
-                            ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>MY HOME</h2></NavLink></li>
+                            ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>HOME</h2></NavLink></li>
                             <li><NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "inactive")}
                             ><h2 style={{ paddingLeft: "20px", cursor: "pointer" }}>ABOUT</h2></NavLink></li>
                         </ul>

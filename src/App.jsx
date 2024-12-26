@@ -10,6 +10,8 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router";
 import PublicMainPageUI from './UIs/PublicMainPageUI';
 import ErrorPage from './UIs/ErrorPage';
 import About from './UIs/About';
+import UserPage from './UIs/UserPage';
+import ProtectedRoutes from './routes/ProtectedRoute';
 
 export const globalStates = createContext();
 
@@ -22,14 +24,18 @@ function App() {
     <globalStates.Provider value={{ dropDown, setDropDown, showCart, setShowCart, showNavSideBar, setShowNavSideBar }}>
       <BrowserRouter>
         <Routes>
+
+          <Route path="/user" element={<ProtectedRoutes><UserPage /></ProtectedRoutes>} />
+
           <Route path="/" element={<PublicMainPageUI />} />
-          <Route path="/" element={
-            <><Navbar /> <Outlet /><Footer /></>}>
-            <Route path="/product-page" element={<ProductDetailPage />} />
+
+          <Route path="/" element={<><Navbar /> <Outlet /><Footer /></>}>
+            <Route path="/product-page/:id" element={<ProductDetailPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
           </Route>
+
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

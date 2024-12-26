@@ -258,6 +258,7 @@ html {
     margin-bottom: 12px;
     position: relative;
     cursor: auto;
+    cursor: pointer;
 }
 
 .addtocart-hover {

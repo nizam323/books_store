@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dummyImage from "../../../public/images/images.png"
+import { useParams } from "react-router";
 
 export default function ProductDetailPage() {
+    const { id } = useParams();
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/get-product/${id}`)
+            .then((response) => {
+                if (!response.ok) {
+                    new Error("Product not found");
+                    setProduct(null)
+                }
+                return response.json();
+            })
+            .then((data) => setProduct(data))
+            .catch((err) => err.message)
+    }, [id])
+
+    if(product == null ) return<div>Error</div>
+
     return (
         <>
 
@@ -9,19 +28,19 @@ export default function ProductDetailPage() {
                 <div className="product-main-container">
                     <div className="product-show">
                         <span id="productCard">
-                            <div className="show-img" style={{ backgroundImage: `url(${dummyImage})` }}></div>
+                            <div className="show-img" style={{ backgroundImage: `url(${product?.productpicurl})` }}></div>
                         </span>
                         <div className="show-txt-con">
                             <div className="show-txt">
-                                <h1>DNK Yellow Shoes</h1>
-                                <p><strike>$150.00</strike> - $120.00 <span style={{ fontSize: "16px" }}>+ Free Shipping</span></p>
+                                <h1>{product?.productname}</h1>
+                                <p>{product?.productprice}$ <span style={{ fontSize: "16px" }}>  + Free Shipping</span></p>
                                 <p style={{ fontSize: "16px", lineHeight: "1.7", textAlign: "justify" }}>Nam nec tellus a odio tincidunt
                                     auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent
                                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in
                                     erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit
                                     sed.</p>
                                 <button id="addtocartproductpage">ADD TO CART</button>
-                                <span style={{ display: "block", marginTop: "20px", fontSize: "16px" }}>Category: Men</span>
+                                <span style={{ display: "block", marginTop: "20px", fontSize: "16px" }}>Category: EDU</span>
                             </div>
                         </div>
                     </div>
@@ -48,7 +67,7 @@ export default function ProductDetailPage() {
                         </div>
                         <div className="product-desc-content-con-3">
                             <div className="product-desc-content-con-2-img"
-                                style={{ backgroundImage: `url(${dummyImage})` }}
+                                style={{ backgroundImage: `url(${product?.productpicurl})` }}
                             // style="background-image: url(images/product-page-3.jpg);"
                             ></div>
                             <div className="product-desc-content-con-2-img spec"
@@ -68,7 +87,7 @@ export default function ProductDetailPage() {
                         </div>
                         <div className="product-desc-content-con-4">
                             <div className="product-desc-content-con-2-img"
-                                style={{ backgroundImage: `url(${dummyImage})` }}
+                                style={{ backgroundImage: `url(${product?.productpicurl})` }}
                             // style="background-image: url(images/product-page-4.jpg);"
                             ></div>
                             <div className="product-desc-content-con-2-img spec"
