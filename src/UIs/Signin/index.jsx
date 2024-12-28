@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import logo from "../../../public/images/images.png"
 import styles from "../Signup/login.module.css"
+import { useNavigate } from "react-router";
 
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,7 +21,11 @@ export default function SignIn() {
             })
         })
             .then((response) => response.json())
-            .then((data) => window.localStorage.setItem("token", data.token))
+            .then((data) => {
+                window.localStorage.setItem("token", data.token)
+                window.localStorage.setItem("userEmail", email)
+                navigate("/user")
+            })
             .catch((error) => console.log(error))
     }
 

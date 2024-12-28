@@ -5,7 +5,7 @@ export default function Herosection() {
     return (
         <>
             <div className="bg-container">
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="bg-content"
                     style={{ position: "relative" }}
                 >
