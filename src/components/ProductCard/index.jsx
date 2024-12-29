@@ -8,7 +8,7 @@ export default function ProductCards({ proName, proPrice, proURl, proId }) {
                 <Link to={`product-page/${proId}`} className="anchor">
                     <div className="pro-img">
                         <span className="anchor">
-                            <div className="addtocart-hover">icon</div>
+                            <div className="addtocart-hover"><i className="fa-solid fa-cart-shopping"></i></div>
                             <img src={proURl} width="100%" height="100%" alt="pic" />
                         </span>
                     </div>

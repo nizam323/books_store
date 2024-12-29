@@ -30,7 +30,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className={`${styles.absec2firstparent} ${styles.absec2firstparentimg}`}
-                    style={{ backgroundImage: `url(images/about-2.jpg)`, backgroundSize: "100% 100%" }}
+                    style={{ backgroundImage: `url(/images/about-2.jpg)`, backgroundSize: "100% 100%" }}
                 >
                 </div>
             </div>
@@ -48,42 +48,42 @@ export default function About() {
                 </div>
                 <div className={styles.otprofilescon}>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-1.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-1.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Harvey Spector</h4>
                         </div>
                         <div className={styles.otproprofession}>Founder - CEO</div>
                     </div>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-2.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-2.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Jessica Pearson</h4>
                         </div>
                         <div className={styles.otproprofession}>COO</div>
                     </div>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-3.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-3.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Rachel Zain</h4>
                         </div>
                         <div className={styles.otproprofession}>Marketing Head</div>
                     </div>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-4.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-4.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Luise Litt</h4>
                         </div>
                         <div className={styles.otproprofession}>Lead Developer</div>
                     </div>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-5.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-5.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Katrina Bennett</h4>
                         </div>
                         <div className={styles.otproprofession}>Intern Designer</div>
                     </div>
                     <div className={styles.otpro}>
-                        <div className={styles.otproimg}><img src="images/ourteam-6.jpg" alt="" /></div>
+                        <div className={styles.otproimg}><img src="/images/ourteam-6.jpg" alt="" /></div>
                         <div className={styles.otproname}>
                             <h4>Mike Ross</h4>
                         </div>

@@ -108,7 +108,7 @@
     width: 100%;
     background-attachment: fixed;
     position: absolute;
-    background-image: url(images/pexels-photo-4219041.webp);
+    background-image: url(/images/pexels-photo-4219041.webp);
     background-size: 100% 114%;
     background-position-y: top;
 }
