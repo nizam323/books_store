@@ -243,6 +243,7 @@ html {
 }
 
 .pro-card {
+    position: relative;
     height: auto;
     background-color: #dedede5c;
     width: 19%;
@@ -250,7 +251,7 @@ html {
     padding-bottom: 30px;
 }
 
-.pro-img { 
+.pro-img {
     background-image: url(images/product-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -262,6 +263,7 @@ html {
 }
 
 .addtocart-hover {
+    z-index: 1;
     position: absolute;
     top: 15px;
     right: 15px;
@@ -447,40 +449,6 @@ html {
     line-height: 1.7;
     text-align: justify;
 }
-
-
-/* adddtocart card */
-
-.addtocart-products {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.addtocart-products-name {
-    padding: 0 0 0 15px;
-    font-size: 13px;
-}
-
-.addtocart-products-price {
-    margin: 10px 0;
-}
-
-.addtocart-products-parent {
-    overflow-y: scroll;
-    height: 100%;
-    display: none;
-}
-
-.addtocart-delete-btn {
-    position: absolute;
-    right: 30px;
-    transform: rotate(45deg);
-    font-size: 45px;
-    cursor: pointer;
-}
-
 
 /* //active */
 

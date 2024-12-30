@@ -3,12 +3,14 @@ import { globalStates } from "../../App";
 import Navsidebar from "../../UIs/NavSideBar";
 import AddToCart from "../../UIs/AddToCart";
 import { NavLink, useNavigate } from "react-router";
+import { useSelector } from "react-redux";
 
 export default function UserNavbar() {
-    useEffect(()=>{
-        
-    },[])
+    useEffect(() => {
 
+    }, [])
+
+    const cartItems = useSelector((state) => state.cart.items)
     const navigate = useNavigate();
     let userEmail = window.localStorage.getItem("userEmail");
     const { showNavSideBar, setShowNavSideBar, showCart, setShowCart, dropDown, setDropDown } = useContext(globalStates);
@@ -38,7 +40,7 @@ export default function UserNavbar() {
                         <ul>
                             <li><a><span className="nav-2nd-span"><span>$</span>0.00</span></a></li>
                             <li><a><i className="fa-solid fa-bag-shopping">
-                                <div className="product-count">0</div>
+                                <div className="product-count">{cartItems.length}</div>
                             </i></a></li>
                         </ul>
                     </div>

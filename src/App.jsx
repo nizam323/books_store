@@ -1,5 +1,3 @@
-import './App.css';
-import './responsive.css'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ProductDetailPage from './components/ProductDetailPage';
@@ -15,6 +13,8 @@ import ProtectedRoutes from './routes/ProtectedRoute';
 import PublicRoute from './routes/PublicRoute';
 import ProductCard from './components/ProductCards';
 import Herosection from './components/Herosection';
+import './App.css';
+import './responsive.css'
 
 export const globalStates = createContext();
 

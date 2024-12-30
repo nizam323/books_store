@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router";
 
-export default function ProductCards({ proName, proPrice, proURl, proId }) {
+export default function ProductCards({ proName, proPrice, proURl, proId, addToCart }) {
     return (
         <>
             <div className="pro-card">
+                <div className="addtocart-hover">
+                    <abbr title="add to cart">
+                        <i onClick={addToCart} className="fa-solid fa-cart-shopping"></i>
+                    </abbr>
+                </div>
                 <Link to={`product-page/${proId}`} className="anchor">
                     <div className="pro-img">
                         <span className="anchor">
-                            <div className="addtocart-hover"><i className="fa-solid fa-cart-shopping"></i></div>
                             <img src={proURl} width="100%" height="100%" alt="pic" />
                         </span>
                     </div>
