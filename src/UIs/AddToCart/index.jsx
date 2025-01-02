@@ -8,7 +8,7 @@ export default function AddToCart() {
     const { showCart, setShowCart } = useContext(globalStates);
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart.items)
-    console.log(cartItems);
+    const totalPrice = cartItems.reduce((sum, item) => sum + item.productprice * item.quantity, 0);
 
     return (
         <>
@@ -46,12 +46,14 @@ export default function AddToCart() {
 
                 </div>
                 <div className={styles.addtocartshopbtn}>
-                    <div className={styles.subtotal}>
-                        <p>Subtotal</p>
-                        <p>$0.00</p>
-                    </div>
                     {cartItems.length > 0 &&
-                        <button id={styles.checkout}>CHECKOUT</button>
+                        <>
+                            <div className={styles.subtotal}>
+                                <p>Subtotal</p>
+                                <p>${totalPrice ? totalPrice : "0"}.00</p>
+                            </div>
+                            <button id={styles.checkout}>CHECKOUT</button>
+                        </>
                     }
                     <button>Continue Shopping</button>
                 </div>
