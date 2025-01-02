@@ -33,7 +33,13 @@ export default function ProductCard() {
                                         proPrice={items.productprice}
                                         proURl={items.productpicurl}
                                         proId={items.id}
-                                        addToCart={() => dispatch(addToCart(items))}
+                                        addToCart={() => {
+                                            if (window.localStorage.getItem("token")) {
+                                                dispatch(addToCart(items))
+                                            } else {
+                                                alert("You need to sign in first to add items to the cart.");
+                                            }
+                                        }}
                                     />
                                 )
                             })

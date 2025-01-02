@@ -24,7 +24,6 @@ export default function UserNavbar() {
                 setData(false)
             })
     }, [])
-    console.log(data);
 
     const cartItems = useSelector((state) => state.cart.items)
     const navigate = useNavigate();

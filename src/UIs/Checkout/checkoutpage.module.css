@@ -1,0 +1,162 @@
+.nav ul li a {
+    color: black;
+}
+
+.productcount {
+    background-color: black;
+    color: white;
+}
+
+.chehd {
+    font-size: 30px;
+    color: #54595f;
+    margin: auto;
+    text-align: center;
+}
+
+.checkcon {
+    padding: 35px 0 80px;
+    background-color: #f5f7f9;
+}
+
+legend {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+}
+
+.flnamecon {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+input:focus {
+    outline: 1px solid #a6a6a6;
+}
+
+input {
+    border: 1px solid #e2e2e2;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    height: 50px;
+    font-size: 20px;
+}
+
+select:focus {
+    outline: 1px solid #a6a6a6;
+}
+
+select {
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid #e2e2e2;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+textarea:focus {
+    outline: 1px solid #a6a6a6;
+}
+
+::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+textarea:focus::placeholder {
+    opacity: 0;
+}
+
+textarea {
+    font-size: 20px;
+    height: 50px;
+    border: 1px solid #e2e2e2;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#placeorder {
+    background-color: #0084d6;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border: 1px solid #0084d6;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#placeorder:hover {
+    background-color: #0075be;
+}
+
+.alert {
+    background-color: #54595f;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    border-radius: 8px;
+}
+
+.ordericon {
+    margin: -10px 0 10px;
+    font-size: 37px;
+}
+
+@media only screen and (min-width:0px) and (max-width:510px) {
+    form {
+        width: 99%;
+    }
+
+    .checkcon {
+        padding: 25px 0 40px;
+    }
+
+    .chehd {
+        font-size: 23px;
+    }
+
+
+    textarea {
+        height: 87px;
+    }
+}
+
+@media only screen and (min-width:511px) and (max-width:1024px) {
+    form {
+        width: 79%;
+    }
+}

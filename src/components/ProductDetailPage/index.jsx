@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import dummyImage from "../../../public/images/images.png"
 import { useParams } from "react-router";
+import { addToCart } from "../../redux/slices/addToCartSlice";
+import { useDispatch } from "react-redux";
 
 export default function ProductDetailPage() {
     const { id } = useParams();
     const [product, setProduct] = useState({});
+    const dispatch = useDispatch();
 
     useEffect(() => {
         fetch(`http://localhost:3000/get-product/${id}`)
@@ -19,7 +22,15 @@ export default function ProductDetailPage() {
             .catch((err) => err.message)
     }, [id])
 
-    if(product == null ) return<div>Error</div>
+    if (product == null) return <div>Error</div>
+
+    const handleAddToCart = () => {
+        if (window.localStorage.getItem("token")) {
+            dispatch(addToCart(product));
+        } else {
+            alert("You need to sign in first to add items to the cart.");
+        }
+    };
 
     return (
         <>
@@ -39,7 +50,7 @@ export default function ProductDetailPage() {
                                     taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in
                                     erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit
                                     sed.</p>
-                                <button id="addtocartproductpage">ADD TO CART</button>
+                                <button id="addtocartproductpage" onClick={handleAddToCart}>ADD TO CART</button>
                                 <span style={{ display: "block", marginTop: "20px", fontSize: "16px" }}>Category: EDU</span>
                             </div>
                         </div>

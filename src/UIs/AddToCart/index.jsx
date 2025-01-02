@@ -3,6 +3,7 @@ import { globalStates } from "../../App";
 import styles from "./addtocart.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../redux/slices/addToCartSlice";
+import { Link } from "react-router";
 
 export default function AddToCart() {
     const { showCart, setShowCart } = useContext(globalStates);
@@ -52,12 +53,12 @@ export default function AddToCart() {
                                 <p>Subtotal</p>
                                 <p>${totalPrice ? totalPrice : "0"}.00</p>
                             </div>
-                            <button id={styles.checkout}>CHECKOUT</button>
+                            <button id={styles.checkout}><Link style={{ color: "white", textDecoration: "none" }} to={"checkout"}> CHECKOUT</Link></button>
                         </>
                     }
                     <button>Continue Shopping</button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

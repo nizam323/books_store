@@ -15,6 +15,7 @@ import ProductCard from './components/ProductCards';
 import Herosection from './components/Herosection';
 import './App.css';
 import './responsive.css'
+import CheckoutPage from './UIs/Checkout';
 
 export const globalStates = createContext();
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/user" element={<><Herosection /><ProductCard /></>} />
             <Route path="/user/product-page/:id" element={<ProductDetailPage />} />
             <Route path="/user/about" element={<About />} />
+            <Route path="/user/checkout" element={<CheckoutPage />} />
           </Route>
 
           <Route path="/" element={<PublicRoute><PublicMainPageUI /></PublicRoute>} >
