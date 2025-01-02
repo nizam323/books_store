@@ -4,6 +4,7 @@ import Navsidebar from "../../UIs/NavSideBar";
 import AddToCart from "../../UIs/AddToCart";
 import { NavLink, useNavigate } from "react-router";
 import { useSelector } from "react-redux";
+import UserNavsidebar from "../../UIs/UserNavSideBar";
 
 export default function UserNavbar() {
     const [data, setData] = useState();
@@ -91,7 +92,7 @@ export default function UserNavbar() {
                 </div>
             </nav >
 
-            <Navsidebar />
+            <UserNavsidebar />
             <AddToCart />
         </>
     )
