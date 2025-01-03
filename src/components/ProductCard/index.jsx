@@ -20,7 +20,7 @@ export default function ProductCards({ proName, proPrice, proURl, proId, addToCa
                         <div className="pro-name">
                             <span className="anchor">{proName}</span>
                         </div>
-                        <div className="pro-price">{proPrice}</div>
+                        <div className="pro-price">{proPrice}$</div>
                         <div className="pro-rating">
                             <i className="fa-solid fa-star"></i>
                             <i className="fa-solid fa-star"></i>

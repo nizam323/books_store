@@ -35,7 +35,7 @@ export default function AddToCart() {
                                             <h3>{items.productprice}$</h3>
                                         </div>
                                         <div className="addtocart-products-quantity">
-                                            <p>{items.quantity}</p>
+                                            <p>Q: {items.quantity}</p>
                                         </div>
                                     </div>
                                     <span className={styles.addtocartdeletebtn}

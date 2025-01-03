@@ -131,7 +131,8 @@
 }
 
 .footerTxt {
-    margin-left: 30px;
+    text-align: center;
+    margin: 0 30px;
     font-size: 1.3rem;
 }
 
@@ -148,4 +149,344 @@
 
 .footerIcon i:hover {
     color: #0075be;
+}
+
+@media only screen and (min-width:0px) and (max-width:766px) {
+    .bgcon1 {
+        font-size: 2.1rem;
+        width: 100%;
+        padding: 0 3px 14px;
+        text-wrap: pretty;
+        text-align: center;
+        /* height: 5.9rem; */
+    }
+
+    .bgcon2 {
+        font-size: 1.5rem;
+        margin: 7px 0 32px;
+    }
+
+    .bgcon3 {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 109px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bgbtn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .bgcontentcontainer {
+        position: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: unset;
+        margin: 0;
+        margin-top: 42px;
+    }
+
+    .cardsparent {
+        flex-direction: column;
+    }
+
+    .cards {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    .txtbig {
+        font-size: 2.3rem;
+        text-align: center;
+        text-wrap: pretty;
+    }
+
+    .txtsm {
+        text-align: center;
+        text-wrap: pretty;
+    }
+
+    .fcardbtn {
+        margin-bottom: -29px;
+    }
+
+    .fcards {
+        width: 100%;
+    }
+
+    .sec5 {
+        margin: 50px 20px;
+        justify-content: center;
+    }
+
+    .sec5content {
+        text-align: center;
+        text-wrap: pretty;
+        height: 430px;
+        margin: 68px auto 0;
+    }
+
+    .sec5txtsm {
+        font-size: 1.4rem;
+    }
+
+    .sec5lorem {
+        font-size: 1rem;
+        width: unset;
+    }
+
+    .sec5txtbig {
+        font-size: 1.9rem;
+    }
+
+    .sec6 {
+        height: auto;
+        width: 90%;
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+
+    .sec6con3 {
+        width: 86%;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footericon {
+        margin: 0;
+    }
+
+    .footertxt {
+        text-align: center;
+        text-wrap: balance;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .footericon i {
+        padding: 0 10px;
+    }
+
+}
+
+
+@media only screen and (min-width:767px) and (max-width:921px) {
+    .bgcon1 {
+        width: 69%;
+        font-size: 3.5rem;
+    }
+
+    .txtbig {
+        font-size: 1.6rem;
+    }
+
+    .txtsm {
+        font-size: 1.4rem;
+    }
+
+    .procardssec {
+        padding: 0;
+    }
+
+    .procard {
+        width: 30%;
+    }
+
+    .proimg {
+        background-size: 100% 100%;
+    }
+
+    .proname {
+        font-size: 1.5rem;
+    }
+
+    .sec6 {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .sec6content {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width:921px) and (max-width:1024px) {
+    .procard {
+        width: 23%;
+    }
+
+    .procardssec {
+        padding: 0 20px;
+    }
+
+    .proimg {
+        background-size: contain;
+    }
+
+    .sec6 {
+        flex-wrap: wrap;
+    }
+
+    .sec6content {
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:630px) {
+    .procardssec {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .procard {
+        width: 48%;
+        padding-bottom: 20px;
+    }
+
+    .proimg {
+        background-size: 100% 120%;
+        height: 160px;
+    }
+
+    .proname {
+        font-size: 1.3rem;
+    }
+
+    .procategory {
+        font-size: 1rem;
+    }
+
+    .proprice {
+        font-size: 1.1rem;
+    }
+
+    .procolorpicker {
+        height: 15px;
+        width: 15px;
+    }
+
+    .cartsidebartoggle {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:510px) {
+    .bgcontainer::before {
+        background-size: cover;
+        background-position: unset;
+    }
+
+    .hd {
+        font-size: 2.1rem;
+        width: 100%;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .proname {
+        font-size: 0.9rem;
+    }
+
+    .sec5::before {
+        background-size: cover;
+    }
+
+    .sec7 {
+        text-align: center;
+        padding: 0 10px;
+        text-wrap: pretty;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        line-height: 1.399;
+    }
+
+    .sec8 {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec8content {
+        width: 95%;
+        padding: 30px 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sec8con1 {
+        margin: 50px 0 0;
+    }
+
+    .sec8content input {
+        width: 95%;
+    }
+
+    .sec8content button {
+        margin-bottom: 50px;
+    }
+
+    @keyframes moveleft {
+
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-90%);
+        }
+    }
+
+    .images img {
+        margin: 0px 70px;
+    }
+
+    .addtocartproductsname {
+        font-size: 9px;
+    }
+
+    .addtocarthover {
+        display: block;
+    }
+}
+
+@media only screen and (min-width:511px) and (max-width:1000px) {
+    .sec8 {
+        padding: 80px 0 50px 24px;
+        justify-content: flex-end;
+    }
+
+    .sec8content {
+        width: 30%;
+    }
+
+    .sec8extra {
+        margin: 20px auto 0;
+        /* display: flex; */
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .sec8con3 {
+        text-wrap: pretty;
+        width: 81%;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1200px) {
+    .sec8 {
+        padding: 80px 55px 110px;
+    }
+
+    .sec8content input {
+        width: 118%;
+    }
 }

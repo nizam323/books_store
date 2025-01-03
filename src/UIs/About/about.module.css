@@ -145,3 +145,137 @@
 .followuscon3 i:hover {
     color: #1882c4;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 766px) {
+    .aboutbgcon {
+        height: 60vh;
+    }
+
+    .aboutsec2container {
+        padding: 30px 20px;
+    }
+
+    .bgcontainer::before {
+        background-size: 100% 60%;
+        background-position: top;
+    }
+
+    .aboutsec2container {
+        flex-direction: column;
+    }
+
+    .absec2firstparent {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .absec2firstparentimg {
+        height: 50vmin;
+    }
+
+    .absec2txt h1 {
+        font-size: 30px;
+    }
+
+    .absec2line {
+        width: 90px;
+    }
+
+    .absec3txt1 {
+        font-size: 16px;
+    }
+
+    .absec3txt2 {
+        font-size: 20px;
+    }
+
+    .absec3txt3 {
+        text-align: justify;
+        line-height: 1.7;
+    }
+
+    .absec3 {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+    .otpro {
+        width: 85%;
+    }
+
+    .followusparent {
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .followuscontentcon {
+        height: 70%;
+        width: 80%;
+    }
+
+    .followuscon2 {
+        margin: 25px 0 35px;
+        font-size: 18px;
+    }
+
+    .followuscon3 i {
+        font-size: 22px;
+        padding: 0px 9px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 921px) {
+    .bgcon1 {
+        width: 100%;
+    }
+
+    .aboutsec2container {
+        flex-direction: column;
+    }
+
+
+    .absec2firstparent {
+        width: 100%;
+    }
+
+    .absec2firstparentimg {
+        height: 341px;
+    }
+
+    .absec3txt1 {
+        font-size: 16px;
+    }
+
+    .absec3txt2 {
+        font-size: 20px;
+    }
+
+    .absec3txt3 {
+        text-align: justify;
+        line-height: 1.7;
+    }
+
+    .absec3 {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+}
+
+@media only screen and (min-width:922px) and (max-width:1024px) {
+    .aboutsec2container {
+        flex-direction: column;
+    }
+
+    .absec2firstparent {
+        width: 100%;
+    }
+
+    .absec2firstparentimg {
+        height: 341px;
+    }
+
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../../public/images/images.png"
 import styles from "./login.module.css"
+import { Link } from "react-router";
 
 export default function SignUp() {
     const [username, setName] = useState("");
@@ -30,7 +31,9 @@ export default function SignUp() {
         <>
             <div className={styles.formcon}>
                 <div className={styles.logincon}>
-                    <div className={styles.img} style={{ backgroundImage: `url(${logo})`, borderRadius: "40px" }}></div>
+                    <center>
+                        <div className={styles.img} style={{ backgroundImage: `url(${logo})`, borderRadius: "40px" }}></div>
+                    </center>
                     <div className={styles.unameemail}>
                         <form method="POST" onSubmit={handleSubmit}>
                             <label htmlFor="u-name" style={{ color: '#3c434a' }}>User Name</label>
@@ -55,9 +58,15 @@ export default function SignUp() {
                             <br />
                             <br />
                             <center>
-                                <span style={{ fontSize: "16px", display: "flex", alignItems: "center", justifyContent: "center" }}>{showPass ? "Hide Password" : "Show Password"}
+                                <span
+                                    onClick={() => setShowPass(!showPass)}
+                                    style={{ fontSize: "16px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>{showPass ? "Hide Password" : "Show Password"}
                                     <pre> </pre>
-                                    <input onClick={() => setShowPass(!showPass)} style={{ cursor: "pointer" }} type="checkbox" /></span>
+                                    <input
+                                        checked={showPass}
+                                        onChange={() => setShowPass(!showPass)}
+                                        style={{ margin: "0", cursor: "pointer" }}
+                                        type="checkbox" /></span>
                             </center>
                             <center>
                                 <div className={styles.checkbtn}>
@@ -68,7 +77,7 @@ export default function SignUp() {
                     </div>
                 </div>
                 <div className={styles.acon}>
-                    <a>← Go to Brandstore</a>
+                    <Link to={"/"}>← Go to Bookstore</Link>
                 </div>
             </div>
         </>
