@@ -62,6 +62,7 @@ export default function UserNavsidebar() {
                         onClick={() => {
                             window.localStorage.removeItem("token")
                             window.localStorage.removeItem("userEmail")
+                            window.localStorage.removeItem("cart")
                             navigate("/")
                         }}
                     >SIGN OUT</h5>
