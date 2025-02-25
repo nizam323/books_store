@@ -9,22 +9,35 @@ export default function SignUp() {
     const [password, setPassword] = useState("");
     const [showPass, setShowPass] = useState(false);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        fetch("https://books-store-backend-mysql.vercel.app/signup", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                username,
-                email,
-                password
-            })
-        })
-        setName("");
-        setEmail("");
-        setPassword("");
+        try {
+            const response = await fetch("https://books-store-backend-mysql.vercel.app/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username,
+                    email,
+                    password
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message);
+                setName("");
+                setEmail("");
+                setPassword("");
+            } else {
+                alert(data.message || "An error occurred. Please try again."); 
+            }
+        } catch (error) {
+            alert("Something went wrong. Please check your network and try again.");
+            console.log("Signup Error:", error);
+        }
     }
 
     return (
