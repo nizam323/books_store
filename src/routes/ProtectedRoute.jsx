@@ -13,7 +13,7 @@ export default function ProtectedRoutes({ children }) {
             return;
         }
 
-        fetch("http://localhost:3000/checkauth", {
+        fetch("https://books-store-backend-mysql.vercel.app/checkauth", {
             method: "GET",
             headers: {
                 authorization: "bearer " + token

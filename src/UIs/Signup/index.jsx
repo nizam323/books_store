@@ -11,7 +11,7 @@ export default function SignUp() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("http://localhost:3000/signup", {
+        fetch("https://books-store-backend-mysql.vercel.app/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

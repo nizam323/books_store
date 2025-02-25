@@ -8,7 +8,7 @@ export default function ProductCard() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch("http://localhost:3000/get-products")
+        fetch("https://books-store-backend-mysql.vercel.app/get-products")
             .then((response) => response.json())
             .then((data) => setData(data))
             .catch((error) => console.error(error))

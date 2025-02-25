@@ -10,7 +10,7 @@ export default function UserNavsidebar() {
     let userEmail = window.localStorage.getItem("userEmail");
 
     useEffect(() => {
-        fetch("http://localhost:3000/profile", {
+        fetch("https://books-store-backend-mysql.vercel.app/profile", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

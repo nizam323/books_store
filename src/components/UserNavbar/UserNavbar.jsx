@@ -9,7 +9,7 @@ import UserNavsidebar from "../../UIs/UserNavSideBar";
 export default function UserNavbar() {
     const [data, setData] = useState();
     useEffect(() => {
-        fetch("http://localhost:3000/profile", {
+        fetch("https://books-store-backend-mysql.vercel.app/profile", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
