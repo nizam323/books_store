@@ -10,7 +10,7 @@ export default function ProductDetailPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch(`https://books-store-backend-mysql.vercel.app/${id}`)
+        fetch(`https://books-store-backend-mysql.vercel.app/get-product/${id}`)
             .then((response) => {
                 if (!response.ok) {
                     new Error("Product not found");
