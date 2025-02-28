@@ -34,7 +34,7 @@ export default function UserNavsidebar() {
                     <div onClick={() => setShowNavSideBar(false)} className={styles.navsidebarclosebtn}>+</div>
                 </div>
 
-                <div className={styles.navsidebaranchors}><NavLink to="/user" className={({ isActive }) => (isActive ? "active2" : "inactive2")}>HOME</NavLink></div>
+                <div className={styles.navsidebaranchors}><NavLink end to="/user" className={({ isActive }) => (isActive ? "active2" : "inactive2")}>HOME</NavLink></div>
                 <div className={styles.navsidebaranchors}><NavLink to="/user/about" className={({ isActive }) => (isActive ? "active2" : "inactive2")}>ABOUT</NavLink></div>
 
                 <div className={styles.navsidebaranchorssepration} style={{ height: "50px" }}></div>
@@ -71,4 +71,4 @@ export default function UserNavsidebar() {
             </div>
         </>
     )
-}
+} 

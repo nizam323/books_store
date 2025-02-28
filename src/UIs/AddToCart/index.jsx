@@ -53,10 +53,16 @@ export default function AddToCart() {
                                 <p>Subtotal</p>
                                 <p>${totalPrice ? totalPrice : "0"}.00</p>
                             </div>
-                            <button id={styles.checkout}><Link style={{ color: "white", textDecoration: "none" }} to={"checkout"}> CHECKOUT</Link></button>
+                            <Link style={{ color: "white", textDecoration: "none", width: "100%", textAlign: "center" }} to={"checkout"}>
+                                <button id={styles.checkout}>
+                                    CHECKOUT
+                                </button>
+                            </Link>
                         </>
                     }
-                    <button>Continue Shopping</button>
+                    <Link style={{ color: "white", textDecoration: "none", width: "100%", textAlign: "center" }} to={"/user"}>
+                        <button>Continue Shopping</button>
+                    </Link>
                 </div>
             </div >
         </>

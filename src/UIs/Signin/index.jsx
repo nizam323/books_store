@@ -21,11 +21,18 @@ export default function SignIn() {
                 password
             })
         })
-            .then((response) => response.json())
-            .then((data) => {
-                window.localStorage.setItem("token", data.token)
-                window.localStorage.setItem("userEmail", email)
-                navigate("/user")
+            .then(async (response) => {
+                const data = await response.json();
+                if (response.ok) {
+                    alert("SignIn Successful");
+                    setEmail("");
+                    setPassword("");
+                    window.localStorage.setItem("token", data.token)
+                    window.localStorage.setItem("userEmail", email)
+                    navigate("/user")
+                } else {
+                    alert(data.message || "An error occurred. Please try again.");
+                }
             })
             .catch((error) => console.log(error))
     }
